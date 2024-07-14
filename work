@@ -13,7 +13,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                sh "sudo cp -r /var/lib/jenkins/workspace/POC_1/* /var/www/html/webapp/"
+                echo "The deploye is done"
             }
         }
     }

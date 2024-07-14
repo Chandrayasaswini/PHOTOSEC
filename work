@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage("checkout"){
+            steps{
+                 echo "checkout scm"
+            }
+        }
+        stage("Build"){
+            steps{
+                echo "The build is done"
+            }
+        }
+        stage("Deploy"){
+            steps{
+                sh "sudo cp -r /var/lib/jenkins/workspace/POC_1/* /var/www/html/webapp/"
+            }
+        }
+    }
+}

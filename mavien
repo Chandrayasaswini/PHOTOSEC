@@ -8,6 +8,9 @@ pipeline {
             }
         }
         stage('Code Analysis') {
+            environment {
+                scannerHome = tool 'SonarQube'
+            }
             steps {
                 script {
                     withSonarQubeEnv('SonarQube') {

@@ -10,7 +10,7 @@ pipeline {
         stage('Code Analysis') {
             steps {
                 script {
-                    withSonarQubeEnv('sonar') {
+                    withSonarQubeEnv('SonarQube') {
                         sh "${scannerHome}/bin/sonar-scanner " +
                            "-Dsonar.projectKey=MNP_Tech " +
                            "-Dsonar.projectName=MNP_Tech " +

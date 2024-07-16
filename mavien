@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        scannerHome = 'sonar' // Adjust this path
+        scannerHome = '/opt/sonar-scanner' // Adjust this path
     }
     stages {
         stage('Fetch Code') {

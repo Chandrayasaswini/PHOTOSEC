@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Fetch Code') {
             steps {
-                git credentialsId: 'YashuGit', branch: 'main', url: 'https://github.com/Chandrayasaswini/PHOTOSEC.git'
+                git credentialsId: 'Github', branch: 'main', url: 'https://github.com/Chandrayasaswini/PHOTOSEC.git'
             }
         }
         stage('Code Analysis') {
